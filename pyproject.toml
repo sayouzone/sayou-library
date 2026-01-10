@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# -----------------
+# 1. 패키지 기본 정보
+# -----------------
+[project]
+name = "sayou-library"
+version = "0.0.1"
+authors = [
+    { name = "Sayouzone", email = "support@sayouzone.com" },
+]
+description = "Sayou Library for Aladin, Hscitylib"
+readme = "README.md"
+license = { file = "./LICENSE" }
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+dependencies = [
+    "pandas>=2.3.3",
+    "beautifulsoup4>=4.14.0",
+    "openpyxl>=3.1.5",
+    "lxml>=6.0.0",
+]
+
+# -----------------
+# 2. 프로젝트 링크 (PyPI 사이드바)
+# -----------------
+[project.urls]
+"Homepage" = "https://www.sayouzone.com/"
+"Repository" = "https://github.com/sayouzone/sayou-healthcare"
+
+# -----------------
+# 3. 소스 코드 위치
+# -----------------
+[tool.hatch.build.targets.wheel]
+packages = ["src/sayou"]
