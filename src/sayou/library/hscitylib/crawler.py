@@ -23,4 +23,4 @@ class HscitylibCrawler:
     """
 
     def __init__(self):
-        self.client = NedrugClient()
+        self.client = HscitylibClient()
